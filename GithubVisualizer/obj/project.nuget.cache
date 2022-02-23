@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "7qyiKBZPnw6NkxYTm7QXV5jn+2f74Zm6nV4U1AGLyxMQktBK4m8InJUms9AUMSySvIigFy+ZMd/gJl4G9u9caw==",
+  "dgSpecHash": "5S9UA+fyry43w/o81n0UIkC6LzS5PafLJ3jiCCvThFg4cxhJ+7Fv9JQY8aGec2llsmaoI3KqhttFfk3l3Kawcw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\source\\repos\\GithubVisualizer\\GithubVisualizer\\GithubVisualizer.csproj",
+  "projectFilePath": "C:\\Users\\konyekwere\\source\\repos\\Mine\\GithubVisualizer\\GithubVisualizer\\GithubVisualizer.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Admin\\.nuget\\packages\\litedb\\5.0.11\\litedb.5.0.11.nupkg.sha512"
+    "C:\\Users\\konyekwere\\.nuget\\packages\\litedb\\5.0.11\\litedb.5.0.11.nupkg.sha512",
+    "C:\\Users\\konyekwere\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\konyekwere\\.nuget\\packages\\restsharp\\106.13.0\\restsharp.106.13.0.nupkg.sha512"
   ],
   "logs": []
 }

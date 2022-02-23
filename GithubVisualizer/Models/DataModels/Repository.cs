@@ -5,8 +5,7 @@ namespace GithubVisualizer.Models.DataModels
 	public class Repository
 	{
 		public int Id { get; set; }
-		public string UserName { get; set; }
-		public string RepoName { get; set; }
+		public string Path { get; set; }
 		public string VisualizerUrl { get; set; }
 
 		public string GetUrlChunk()

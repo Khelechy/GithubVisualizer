@@ -3,14 +3,27 @@ using GithubVisualizer.Interfaces;
 using GithubVisualizer.Models.DataModels;
 using GithubVisualizer.Models.RequestModels;
 using GithubVisualizer.Models.ResponseModels;
+using Newtonsoft.Json;
 
 namespace GithubVisualizer.Services
 {
 	public class VisualizerService : IVisualizerService
 	{
-		public GenerateVisualizerResponseModel GenerateVisualizerLink(GenerateVisualizerRequestModel model)
+		private readonly IConfiguration _configuration;
+        private readonly string _accept;
+        private readonly IHttpService _httpService;
+
+        public VisualizerService(IConfiguration configuration, IHttpService httpService)
 		{
-			if (!Uri.TryCreate(model.RepoUrl, UriKind.Absolute, out Uri result))
+			_configuration = configuration;
+			_accept = _configuration["AppConfig:Accept"];
+			_httpService = httpService;
+		}
+
+		public async Task<GenerateVisualizerResponseModel> GenerateVisualizerLink(GenerateVisualizerRequestModel model)
+		{
+			var newUrl = model.RepoUrl.Replace(".git", "");
+			if (!Uri.TryCreate(newUrl, UriKind.Absolute, out Uri result))
 			{
 				return new GenerateVisualizerResponseModel
 				{
@@ -21,16 +34,33 @@ namespace GithubVisualizer.Services
 
 			}
 
+			//Validate Github Repo Link format
+
+
 			var url = result.ToString();
 
-			//Get Repo Username and Name from Github
+			//Extract Path
+			var pathArray = url.Split('/');
+			var path = $"{pathArray[pathArray.Length - 2]}/{pathArray[pathArray.Length - 1]}";
+
+
+			//Get Repo Data
+			var repoData = await GetRepoData(path);
+			if(repoData == null)
+            {
+				return new GenerateVisualizerResponseModel
+				{
+					Url = null,
+					Error = "Github Repository does not exist",
+					IsError = true
+				};
+			}
 
 			// Temporary short link 
 			var entry = new Repository
 			{
 				VisualizerUrl = url,
-				UserName = "khelechy",
-				RepoName = "GithubVisualizer"
+				Path = path
 			};
 
 			// Insert our short-link
@@ -61,5 +91,21 @@ namespace GithubVisualizer.Services
 				return null;
 			}
 		}
+
+		public async Task<GetRepositoryResponseModel> GetRepoData(string path)
+        {
+			var headers = new Dictionary<string, string>();
+			headers.Add("Accept", _accept);
+			var response = await _httpService.GetAsync($"repos/{path}", headers);
+			if(response.IsSuccessful)
+            {
+				var responseData = JsonConvert.DeserializeObject<GetRepositoryResponseModel>(response.Content);
+				return responseData;
+            }
+            else
+            {
+				return null;
+            }
+        }
 	}
 }

@@ -22,9 +22,9 @@ namespace GithubVisualizer.Controllers
 			return View();
 		}
 
-		public Task GenerateVisualizer(GenerateVisualizerRequestModel model)
+		public async Task<Task> GenerateVisualizer(GenerateVisualizerRequestModel model)
 		{
-			var result = _visualizerService.GenerateVisualizerLink(model);
+			var result = await _visualizerService.GenerateVisualizerLink(model);
 			var fullUrl = $"{HttpContext.Request.Scheme}://{HttpContext.Request.Host}/{result.Url}";
 			if (!result.IsError)
 			{

@@ -7,6 +7,6 @@ namespace GithubVisualizer.Interfaces
 	public interface IVisualizerService
 	{
 		Repository GetVisualizedRepository(HttpContext context);
-		GenerateVisualizerResponseModel GenerateVisualizerLink(GenerateVisualizerRequestModel model);
+		Task<GenerateVisualizerResponseModel> GenerateVisualizerLink(GenerateVisualizerRequestModel model);
 	}
 }
