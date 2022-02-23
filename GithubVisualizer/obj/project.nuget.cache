@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "7qyiKBZPnw6NkxYTm7QXV5jn+2f74Zm6nV4U1AGLyxMQktBK4m8InJUms9AUMSySvIigFy+ZMd/gJl4G9u9caw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Admin\\source\\repos\\GithubVisualizer\\GithubVisualizer\\GithubVisualizer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\litedb\\5.0.11\\litedb.5.0.11.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "7381c3ea-4283-4e5f-a2f1-f25d69990db4": {
+      "ProjectGuid": "7381c3ea-4283-4e5f-a2f1-f25d69990db4",
+      "DisplayName": "GithubVisualizer",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

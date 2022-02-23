@@ -1,0 +1,34 @@
+﻿@using GithubVisualizer.Models.RequestModels
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model GenerateVisualizerRequestModel
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Generate a visualizer for github repos.</p>
+
+    <form asp-controller="Home" asp-action="GenerateVisualizer">
+        <label for="url">Url</label>
+        <input type="url" asp-for="RepoUrl" />
+        <br />
+
+        <button type="submit">Generate</button>
+    </form>
+
+    <!-- A a place to put our resulting short link -->
+    <p class="a" id="urlResult"></p>
+</div>
+
+<script>
+    let data = window.location.hash;
+    if (data) {
+        let url = new URL(data.substr(1));
+        if (url.protocol === window.location.protocol
+            && url.host === window.location.host) {
+            let section = document.getElementById('urlResult');
+            section.innerHTML = `<a id="link" href="${url}" target=_blank>${url}</a>`;
+        }
+    }
+</script>
