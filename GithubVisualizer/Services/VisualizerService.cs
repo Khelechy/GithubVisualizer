@@ -77,14 +77,14 @@ namespace GithubVisualizer.Services
 
 		}
 
-		public Repository GetVisualizedRepository(HttpContext context)
+		public async Task<GetRepositoryResponseModel> GetVisualizedRepository(HttpContext context)
 		{
 			var path = context.Request.Path.ToUriComponent().Trim('/');
 			if (path.Length == 6)
 			{
 				var id = Repository.GetId(path);
 				var entry = LiteDbHelper.GetById(id);
-				return entry;
+				return await GetRepoData(entry.Path);
 			}
 			else
 			{
@@ -100,6 +100,10 @@ namespace GithubVisualizer.Services
 			if(response.IsSuccessful)
             {
 				var responseData = JsonConvert.DeserializeObject<GetRepositoryResponseModel>(response.Content);
+				//Get Event repo
+				var repoRequest = await _httpService.GetAsync(responseData.events_url);
+				var repoResponse = JsonConvert.DeserializeObject<List<RepoEventsResponseModel>>(repoRequest.Content);
+				responseData.repo_events = repoResponse;
 				return responseData;
             }
             else

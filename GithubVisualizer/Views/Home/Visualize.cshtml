@@ -1,1 +1,59 @@
-﻿
+﻿@using GithubVisualizer.Models.ResponseModels
+@model GetRepositoryResponseModel
+@{
+    ViewData["Title"] = "Visualizer";
+}
+
+
+<div class="container">
+    <div class="text-center">
+        <img id="avatar" src="@Model.owner.avatar_url" style="width: 150px; height: 150px; border-radius: 50%" />
+        <h5 class="mt-3" id="owner"><b>Owner's name: </b>@Model.owner.login</h5>
+        <h5 class="mt-3"><b>Owner's profile: </b><a href="@Model.owner.html_url">Click </a></h5>
+        <div class="row justify-content-center">
+            <p class="" id="eventAction"></p>
+            <p class="" id="dt"></p>
+        </div>
+        <br />
+        <h3>Repo Details</h3>
+        <p class="text-left" id="repoName"><b>Repository name: </b><span>@Model.name</span></p>
+        <p class="text-left" id="description">@Model.description</p>
+        <p class="text-left" id="isPublic"><b>Repository visibility: </b>@Model.visibility</p>
+        <p class="text-left" id="isPublic">has @Model.open_issues_count open issue(s)</p>
+        <p class="text-left" id="isPublic">has @Model.forks_count fork(s)</p>
+        <p class="text-left" id="isPublic">has @Model.watchers_count active watcher(s)</p>
+        <a id="repoLink" href="@Model.url">Visit Repo</a>
+        <br />
+        <h3>Repo Events</h3>
+        <table class="table" cellpadding="5">
+            <thead>
+                <tr>
+                    <th class="col-2">Event Type</th>
+                    <th class="col-2">By</th>
+                    <th class="col-7">Commit Message</th>
+                    <th class="col-2">Commit Url</th>
+                </tr>
+
+            </thead>
+            <tbody>
+                @{
+                    if (Model.repo_events != null)
+                    {
+                        foreach (var repoEvent in Model.repo_events)
+                        {
+                            <tr>
+                                <td class="col-2">@repoEvent?.type</td>
+                                <td class="col-2">@repoEvent?.actor.login</td>
+                                <td class="col-7">@repoEvent?.payload?.commits?[0].message</td>
+                                <td class="col-2"><a href="@repoEvent?.payload?.commits?[0].url">click</a></td>
+                            </tr>
+                        }
+
+                    }
+                }
+            </tbody>
+        </table>
+
+
+    </div>
+</div>

@@ -96,6 +96,7 @@ namespace GithubVisualizer.Models.ResponseModels
         public Organization organization { get; set; }
         public Parent parent { get; set; }
         public Source source { get; set; }
+        public List<RepoEventsResponseModel> repo_events { get; set; }
     }
 
     public class Owner

@@ -1,3 +1,10 @@
+C:\Users\konyekwere\source\repos\Mine\GithubVisualizer\GithubVisualizer\obj\Debug\net6.0\GithubVisualizer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\konyekwere\source\repos\Mine\GithubVisualizer\GithubVisualizer\obj\Debug\net6.0\GithubVisualizer.AssemblyInfoInputs.cache
+C:\Users\konyekwere\source\repos\Mine\GithubVisualizer\GithubVisualizer\obj\Debug\net6.0\GithubVisualizer.AssemblyInfo.cs
+C:\Users\konyekwere\source\repos\Mine\GithubVisualizer\GithubVisualizer\obj\Debug\net6.0\GithubVisualizer.csproj.CoreCompileInputs.cache
+C:\Users\konyekwere\source\repos\Mine\GithubVisualizer\GithubVisualizer\obj\Debug\net6.0\GithubVisualizer.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\konyekwere\source\repos\Mine\GithubVisualizer\GithubVisualizer\obj\Debug\net6.0\GithubVisualizer.RazorAssemblyInfo.cache
+C:\Users\konyekwere\source\repos\Mine\GithubVisualizer\GithubVisualizer\obj\Debug\net6.0\GithubVisualizer.RazorAssemblyInfo.cs
 C:\Users\Admin\source\repos\GithubVisualizer\GithubVisualizer\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\Admin\source\repos\GithubVisualizer\GithubVisualizer\bin\Debug\net6.0\appsettings.json
 C:\Users\Admin\source\repos\GithubVisualizer\GithubVisualizer\bin\Debug\net6.0\GithubVisualizer.staticwebassets.runtime.json
@@ -8,6 +15,8 @@ C:\Users\Admin\source\repos\GithubVisualizer\GithubVisualizer\bin\Debug\net6.0\G
 C:\Users\Admin\source\repos\GithubVisualizer\GithubVisualizer\bin\Debug\net6.0\ref\GithubVisualizer.dll
 C:\Users\Admin\source\repos\GithubVisualizer\GithubVisualizer\bin\Debug\net6.0\GithubVisualizer.pdb
 C:\Users\Admin\source\repos\GithubVisualizer\GithubVisualizer\bin\Debug\net6.0\LiteDB.dll
+C:\Users\Admin\source\repos\GithubVisualizer\GithubVisualizer\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\Admin\source\repos\GithubVisualizer\GithubVisualizer\bin\Debug\net6.0\RestSharp.dll
 C:\Users\Admin\source\repos\GithubVisualizer\GithubVisualizer\obj\Debug\net6.0\GithubVisualizer.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Admin\source\repos\GithubVisualizer\GithubVisualizer\obj\Debug\net6.0\GithubVisualizer.AssemblyInfoInputs.cache
 C:\Users\Admin\source\repos\GithubVisualizer\GithubVisualizer\obj\Debug\net6.0\GithubVisualizer.AssemblyInfo.cs
@@ -25,10 +34,3 @@ C:\Users\Admin\source\repos\GithubVisualizer\GithubVisualizer\obj\Debug\net6.0\G
 C:\Users\Admin\source\repos\GithubVisualizer\GithubVisualizer\obj\Debug\net6.0\ref\GithubVisualizer.dll
 C:\Users\Admin\source\repos\GithubVisualizer\GithubVisualizer\obj\Debug\net6.0\GithubVisualizer.pdb
 C:\Users\Admin\source\repos\GithubVisualizer\GithubVisualizer\obj\Debug\net6.0\GithubVisualizer.genruntimeconfig.cache
-C:\Users\konyekwere\source\repos\Mine\GithubVisualizer\GithubVisualizer\obj\Debug\net6.0\GithubVisualizer.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\konyekwere\source\repos\Mine\GithubVisualizer\GithubVisualizer\obj\Debug\net6.0\GithubVisualizer.AssemblyInfoInputs.cache
-C:\Users\konyekwere\source\repos\Mine\GithubVisualizer\GithubVisualizer\obj\Debug\net6.0\GithubVisualizer.AssemblyInfo.cs
-C:\Users\konyekwere\source\repos\Mine\GithubVisualizer\GithubVisualizer\obj\Debug\net6.0\GithubVisualizer.csproj.CoreCompileInputs.cache
-C:\Users\konyekwere\source\repos\Mine\GithubVisualizer\GithubVisualizer\obj\Debug\net6.0\GithubVisualizer.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\konyekwere\source\repos\Mine\GithubVisualizer\GithubVisualizer\obj\Debug\net6.0\GithubVisualizer.RazorAssemblyInfo.cache
-C:\Users\konyekwere\source\repos\Mine\GithubVisualizer\GithubVisualizer\obj\Debug\net6.0\GithubVisualizer.RazorAssemblyInfo.cs

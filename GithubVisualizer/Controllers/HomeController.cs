@@ -33,20 +33,22 @@ namespace GithubVisualizer.Controllers
 			}
 			else
 			{
+				TempData["Error"] = result.Error;
 				HttpContext.Response.Redirect("/");
 			}
 			return Task.CompletedTask;
 		}
 
-		public IActionResult Visualize()
+		public async Task<IActionResult> Visualize()
 		{
-			var repo = _visualizerService.GetVisualizedRepository(HttpContext);
+			var repo = await _visualizerService.GetVisualizedRepository(HttpContext);
 			if(repo != null)
 			{
 				return View(repo);
 			}
 			else
 			{
+				TempData["Error"] = "Ooops, not a valid visualizer link";
 				return RedirectToAction("Index", "Home");
 			}
 		}

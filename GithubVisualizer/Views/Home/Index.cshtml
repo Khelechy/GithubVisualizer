@@ -10,6 +10,7 @@
     <p>Generate a visualizer for github repos.</p>
 
     <form asp-controller="Home" asp-action="GenerateVisualizer">
+        <p class="a" id="errMsgBox">@TempData["Error"]</p>
         <label for="url">Url</label>
         <input type="url" asp-for="RepoUrl" />
         <br />
