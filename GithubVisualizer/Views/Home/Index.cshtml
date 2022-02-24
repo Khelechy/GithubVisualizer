@@ -19,10 +19,10 @@
     </form>
 
     <!-- A a place to put our resulting short link -->
-    <p class="a" id="urlResult"></p>
+    <p class="a" id="urlResult">@{<a href="@TempData["URL"]">@TempData["URL"]</a>}</p>
 </div>
 
-<script>
+<!-- <script>
     let data = window.location.hash;
     if (data) {
         let url = new URL(data.substr(1));
@@ -32,4 +32,4 @@
             section.innerHTML = `<a id="link" href="${url}" target=_blank>${url}</a>`;
         }
     }
-</script>
+</script> -->
