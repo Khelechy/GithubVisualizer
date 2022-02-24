@@ -12,3 +12,6 @@ This solution generates a shareable link for your github repository that helps v
 - Run "dotnet build" to build and make sure there isnt error
 - Run "dotnet restore" to restore all external packages
 - Run "dotnet run" to run the project Or Open with VS22 to run
+
+
+![alt text](https://github.com/khelechy/GithubVisualizer/blob/main/arch.png?raw=true)
