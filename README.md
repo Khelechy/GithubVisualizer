@@ -14,4 +14,4 @@ This solution generates a shareable link for your github repository that helps v
 - Run "dotnet run" to run the project Or Open with VS22 to run
 
 
-![alt text](https://github.com/khelechy/GithubVisualizer/blob/main/arch.png?raw=true)
+![alt text](https://github.com/khelechy/GithubVisualizer/blob/main/architechture.png?raw=true)
